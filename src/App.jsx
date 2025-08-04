@@ -27,6 +27,21 @@ function App() {
         iconIsClicked = true
     }
 
+    let PokemonStyle = {
+        borderRadius: '20px',
+        width: '20rem',
+        height: '20rem'
+    }
+
+    let PokemonBar = {
+        borderRadius: '20px',
+        width: '20rem'
+    }
+
+    let Id = {
+        color: ''
+    }
+
 
     const LogoPokemon = () => {
         return <img src="/src/asset/logo_pokemon.png" alt="a" style={{width: 30, heigth: 30}}/>
@@ -40,7 +55,7 @@ function App() {
     const DivPokemon = () => {
         return <section>
             <div>
-                <img src="" alt=""/>
+                <img src="/src/asset/bulbizare.png" alt="b" style={PokemonStyle}/>
             </div>
 
         </section>
@@ -55,6 +70,17 @@ function App() {
                 <SearchBar onClick={iconIsClick} style={searchBarStyle}/>
                 <SearchIcon style={{paddingLeft: '50'}}/>
             </header>
+
+            <section style={{display: 'flex', alignItems: 'center',justifyContent: 'center', marginTop: '30px'}}>
+                <div style={PokemonBar}>
+                    <DivPokemon/>
+                    <p style={Id}>N°001</p>
+                    <p>
+                        <h1>Bulbizarre</h1>
+                    </p>
+                </div>
+
+            </section>
     </>
 }
 
